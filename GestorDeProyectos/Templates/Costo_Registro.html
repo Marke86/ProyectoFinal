@@ -1,0 +1,21 @@
+{% extends "Padre_Registro.html" %}
+
+{% load static %}
+
+{% block Titulo %}
+<h3 class="text-center font-weight-light my-4">CARGA DE COSTOS</h3>
+{% endblock %}
+
+{% block Formulario %}
+<form action="{% url 'ProyectoRegistro' %}" method="POST"> {% csrf_token %} 
+    <table>
+
+        {{ CostosFormulario.as_table }}
+        
+    </table>
+    <div class="me-4">
+    <input class="btn btn-primary btn-block" type="submit", value="Enviar"> 
+    </div>
+</form>
+{% endblock %}
+
