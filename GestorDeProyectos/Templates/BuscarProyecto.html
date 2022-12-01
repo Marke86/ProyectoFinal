@@ -1,0 +1,25 @@
+{% extends "Padre_Registro.html" %}
+
+{% load static %}
+
+{% block Titulo %}
+<h3 class="text-center font-weight-light my-4">BUSCAR PROYECTOS</h3>
+{% endblock %}
+
+{% block Formulario %}
+<!-- envia los datos de la busqueda a Resultados -->
+<div class="text-center">
+<form action="{% url 'Resultados' %}" method="GET"> 
+
+    <input type="text" name="Nombre" id="Nombre"><BR/>
+
+    <input type="submit" value="Buscar Proyecto" CLASS="btn btn-primary btn-block my-4">
+
+
+</form>
+</div>
+{{mensaje}}
+
+
+
+{% endblock %}

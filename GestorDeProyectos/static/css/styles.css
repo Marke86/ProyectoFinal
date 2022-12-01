@@ -182,7 +182,10 @@ ul,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  list-style-type: none;
 }
+
+
 
 ol ol,
 ul ul,
@@ -3048,7 +3051,9 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
+  margin: 1px;
 }
+
 .btn-primary:hover {
   color: #fff;
   background-color: #0b5ed7;
@@ -11694,8 +11699,16 @@ body {
 }
 
 .btn-datatable {
-  height: 20px !important;
+  height: 20px !important; 
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.center-inidice{ 
+  margin: 0 auto;
 }

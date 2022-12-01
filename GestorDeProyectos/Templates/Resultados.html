@@ -1,0 +1,36 @@
+{% extends "Padre_Registro.html" %}
+
+{% load static %}
+
+{% block Titulo %}
+<h3 class="text-center font-weight-light my-4">RESULTADOS</h3>
+{% endblock %}
+
+{% block Formulario %}
+{% if proyect %}
+
+<table class="dataTable-table">
+    <tr>
+        <th>Codigo</th>
+        <th>Proyecto</th>
+        <th>Responsable</th>
+        <th>Presupuesto Base</th>
+        <th>Pesupuesto Actualizado</th>
+    </tr>    
+    {% for Proyecto in proyect %}
+    <tr>
+        <td>{{Proyecto.Codigo}}</td>
+        <td>{{Proyecto.Nombre}}</td>
+        <td>{{Proyecto.Responsable}}</td>
+        <td>MUSD {{Proyecto.PresupuestoBase}}</td>
+        <td>MUSD {{Proyecto.PresupuestoActualizado}}</td>
+
+    </tr>    
+    {% endfor %}    
+</table>
+{% else %}
+<h3>NO SE ENCONTRARON RESULTADOS</h3>
+{% endif %} 
+
+<a class="btn btn-primary btn-block" href="{% url 'inicio' %}">VOLVER</a>
+{% endblock %}
